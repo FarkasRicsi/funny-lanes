@@ -47,3 +47,6 @@ MonoBehaviour:
   tokens:
   - {fileID: 11400000, guid: 7433b498cedc0a5459aa12c9ffea929e, type: 2}
   - {fileID: 11400000, guid: cb8972973d5d1994982a42f9b995daec, type: 2}
+  spawnPoints: []
+  gameManager: {fileID: 0}
+  lastTokensLength: 3

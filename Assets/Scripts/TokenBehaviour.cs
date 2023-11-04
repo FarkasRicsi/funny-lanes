@@ -10,6 +10,7 @@ public class TokenBehaviour : MonoBehaviour
     [SerializeField]
     public SpriteRenderer spriteRenderer;
 
+    //Protected: Child classes can see, others don't.
     protected GameManager gameManager;
 
     private void Start()

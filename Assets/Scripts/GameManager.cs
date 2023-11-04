@@ -19,14 +19,14 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private int score;
-    public int Score
+    private int _score;
+    public int score
     {
-        get { return score; }
+        get { return _score; }
         set
         {
-            score = value;
-            uiManager.UpdateScore(score);
+            _score = value;
+            uiManager.UpdateScore(_score);
         }
     }
 
@@ -51,7 +51,7 @@ public class GameManager : MonoBehaviour
     }
     public void StopTheGame()
     {
-        score = 0;
+        _score = 0;
         uiManager.GetComponent<UIManager>().ShowTitleScreen(true);
 
         GameObject[] tokens = GameObject.FindGameObjectsWithTag("Token");

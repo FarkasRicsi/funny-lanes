@@ -5,7 +5,10 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/GameScene.unity
     guid: 47a54c27b2da69c4099a4dc11bd76150
+  - enabled: 1
+    path: Assets/Scenes/TestMultitouch.unity
+    guid: b49b68681da0fa74299f8ce290e646d4
   m_configObjects: {}

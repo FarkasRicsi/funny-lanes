@@ -12,7 +12,7 @@ public class CircleTokenBehaviour : TokenBehaviour
         PlayerBaseBehaviour playerBase = collision.GetComponent<PlayerBaseBehaviour>();
         if (playerBase.color == color)
         {   
-            gameManager.Score++;
+            gameManager.score++;
         }
         else
         {  

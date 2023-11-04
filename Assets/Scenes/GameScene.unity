@@ -642,6 +642,50 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ed0fdbb9b1ddf844a9252c9a7d01f943, type: 3}
+--- !u!1 &1562067715
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1562067716}
+  - component: {fileID: 1562067717}
+  m_Layer: 0
+  m_Name: TouchController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1562067716
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1562067715}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.7399568, y: -0.986162, z: -11.447923}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1562067717
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1562067715}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 731bdaf580e219446963ac6181ae2900, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  touchGO: {fileID: 0}
 --- !u!1 &1570602803
 GameObject:
   m_ObjectHideFlags: 0
@@ -1220,6 +1264,14 @@ PrefabInstance:
       propertyPath: circlePrefab
       value: 
       objectReference: {fileID: 8112829984718079198, guid: a10033a34145564418e7ef8c28a742f7, type: 3}
+    - target: {fileID: 1339346759520542813, guid: 72d6090e8e3699c4f99a55d337eec04b, type: 3}
+      propertyPath: lastTokensLength
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1339346759520542813, guid: 72d6090e8e3699c4f99a55d337eec04b, type: 3}
+      propertyPath: tokens.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 7433b498cedc0a5459aa12c9ffea929e, type: 2}
     - target: {fileID: 1339346759520542813, guid: 72d6090e8e3699c4f99a55d337eec04b, type: 3}
       propertyPath: spawnPoints.Array.size
       value: 2

@@ -20,11 +20,21 @@ public class TokenController : MonoBehaviour
 
     private Coroutine spawnCircleTokenCoroutine;
 
+    [SerializeField]
+    private int lastTokensLength = 3;
+
+    Queue<int> lastTokens = new Queue<int>();
+
     void Start()
     {
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         //CreatePrefab();
         //StartSpawnRoutines();
+        for (int i = 0; i < lastTokensLength; i++)
+        {
+            lastTokens.Enqueue(-1);
+        }
+
     }
 
     public virtual void CreatePrefab()
@@ -43,11 +53,17 @@ public class TokenController : MonoBehaviour
 
     private IEnumerator SpawnCircleTokenCoroutine()
     {
+
         Random r = new Random();
         int tokenID;
         while (gameManager.GameIsRunning)
         {
-            tokenID = r.Next(0, tokens.Length);
+            do
+            {
+                tokenID = r.Next(0, tokens.Length);
+            } while (queueIsTheSame() && tokenID == lastTokens.Peek());
+            lastTokens.Dequeue();
+            lastTokens.Enqueue(tokenID);
             InstantiateCircle(tokens[tokenID].color, tokens[tokenID].colorRGB, r.Next(0, spawnPoints.Length));
             float wait = r.Next(45, 100) / 100.0f;
             yield return new WaitForSeconds(wait);
@@ -62,4 +78,16 @@ public class TokenController : MonoBehaviour
         Instantiate(circlePrefab, spawnPoints[spawnPoint].transform.position, Quaternion.identity);
     }
 
+    private bool queueIsTheSame()
+    {
+        int first = lastTokens.Peek();
+        foreach (int item in lastTokens)
+        {
+            if (first != item)
+            {
+                return false;
+            }
+        }
+        return true;
+    }
 }

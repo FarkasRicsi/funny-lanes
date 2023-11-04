@@ -14,10 +14,13 @@ public class PlayerBaseBehaviour : MonoBehaviour
         changeColor();
     }
 
+
+    
     public void OnMouseUp()
     {
         changeColor();
     }
+    
     public void changeColor()
     {
         if (color == EColor.Green)
